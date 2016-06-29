@@ -1,0 +1,83 @@
+// put these mixins into a separate mixins file?
+
+// these mixins implement Benton Sans typefaces from TypeNetwork/FontBureau
+
+@mixin benton-sans--medium {
+  font-family: "Benton Sans Med", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+@mixin benton-sans--light {
+  font-family: "Benton Sans Lt", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin style-title-type {
+  color: $white;
+  text-transform: uppercase;
+
+  .inner-wrapper {
+    margin-bottom: 15px;
+  }
+}
+
+@mixin style-title-type--thicker {
+  @include style-title-type;
+  @include benton-sans--medium;
+}
+
+//
+// Type styles.
+//
+body {
+  @include benton-sans--light;
+}
+
+.site-name,
+.site-slogan {
+  font-size: 30px;
+  line-height: 29px;
+
+  @include media($medium-screen-up) {
+    font-size: 24px;
+  }
+  @include media($large-screen-up) {
+    font-size: 26px;
+  }
+  @include media($wide-screen-up) {
+    font-size: 30px;
+  }
+}
+
+.site-name {
+  @include style-title-type--thicker;
+}
+
+.site-slogan {
+  @include style-title-type;
+}
+
+.client-list {
+  font-size: 20px;
+
+  @include media($medium-screen-up) {
+    font-size: 16px;
+  }
+  @include media($large-screen-up) {
+    font-size: 20px;
+  }
+}
+
+.menu-item,
+.block-drupal-profile {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @include media($mobile) {
+    font-size: 15px;
+  }
+}

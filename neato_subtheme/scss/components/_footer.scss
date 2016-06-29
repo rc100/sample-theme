@@ -1,0 +1,47 @@
+// sticky footer
+.layout-footer {
+  @include media($medium-screen-up) {
+    height: $footer-height;
+  }
+}
+
+@media screen and (min-width: $medium-screen) and (max-height: $medium-screen-height-min - 1px) {
+  .layout-main {
+    min-height: $medium-screen-height-min - $footer-height;
+  }
+}
+
+@media screen and (min-width: $medium-screen) and (min-height: $medium-screen-height-min) and (max-height: $medium-screen-height-max) {
+  html,
+  body,
+  .layout-page {
+    height: 100%;
+  }
+
+  .layout-main {
+    min-height: 100%;
+    margin-bottom: -$footer-height;
+
+    &:after {
+      content: "";
+      display: block;
+      height: $footer-height;
+    }
+  }
+}
+
+@media screen and (min-width: $medium-screen) and (min-height: $medium-screen-height-max + 1px) {
+  .layout-main {
+    min-height: $medium-screen-height-max - $footer-height;
+  }
+}
+
+// additional footer styles
+.layout-footer-bottom {
+  padding-top: 10px;
+
+  @include media($mobile) {
+    padding-top: 23px;
+    padding-bottom: 60px;
+  }
+}

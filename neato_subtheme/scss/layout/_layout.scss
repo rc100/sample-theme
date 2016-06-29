@@ -1,0 +1,64 @@
+.layout-main {
+  @include outer-container;
+}
+
+.layout-sidebar-first {
+  @include media($mobile) {
+    @include fill-parent();
+  }
+  @include media($medium-screen-up) {
+    @include span-columns(11);
+    @include shift(1);
+  }
+  @include media($large-screen-up) {
+    @include span-columns(7);
+    @include shift(1);
+  }
+}
+
+.layout-content {
+  @include media($mobile) {
+    @include fill-parent();
+  }
+  @include media($medium-screen-up) {
+    @include span-columns(11);
+    @include shift(1);
+  }
+  @include media($large-screen-up) {
+    @include span-columns(15);
+    @include shift(1);
+  }
+}
+
+.layout-footer {
+  @include outer-container;
+}
+
+.layout-footer-bottom {
+  @include media($mobile) {
+    @include fill-parent();
+  }
+  @include media($medium-screen-up) {
+    @include span-columns(22 of 24);
+    @include shift(1);
+
+    .layout-region {
+      @include span-columns(22 of 22);
+    }
+    .block-menu-primary {
+      @include span-columns(3 of 22);
+      min-width: 100px;
+    }
+    .block-drupal-profile {
+      @include span-columns(5 of 22);
+    }
+  }
+  @include media($large-screen-up) {
+    @include span-columns(22);
+    @include shift(1);
+  }
+}
+
+.outer-wrapper {
+  @include outer-container;
+}

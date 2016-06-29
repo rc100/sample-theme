@@ -1,0 +1,29 @@
+
+// add variable to replace list of links below
+
+.block-menu,
+.block-drupal-profile,
+.block-client-list {
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active,
+  a:focus {
+    color: $orange;
+  }
+}
+
+.block-menu,
+.block-drupal-profile {
+  @include media($mobile) {
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active,
+    a:focus {
+      color: $white;
+    }
+  }
+}

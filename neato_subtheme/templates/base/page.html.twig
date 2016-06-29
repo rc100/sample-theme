@@ -1,0 +1,52 @@
+<div role="document" class="layout-page">
+
+  {%  if page.featured %}
+    <section class="layout-featured">
+      <div class="columns">
+        {{ page.featured }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if messages %}
+    <section class="layout-messages">
+      <div class="outer-wrapper">
+        {{ messages }}
+      </div>
+    </section>
+  {% endif %}
+
+  <main role="main" class="layout-main outer-wrapper">
+    {% if page.sidebar_first %}
+      <aside role="complementary" class="layout-sidebar-first sidebar">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    <section class="layout-content">
+      {{ page.content }}
+    </section>
+
+    {% if page.sidebar_second %}
+      <aside role="complementary" class="layout-sidebar-second sidebar">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+  </main>
+
+  {% if page.footer_top or page.footer_bottom %}
+    <footer role="contentinfo" class="layout-footer outer-wraper">
+      {% if page.footer_top %}
+        <section class="layout-footer-top">
+          {{ page.footer_top }}
+        </section>
+      {% endif %}
+
+      {% if page.footer_bottom %}
+        <section class="layout-footer-bottom">
+          {{ page.footer_bottom }}
+        </section>
+      {% endif %}
+    </footer>
+  {% endif %}
+</div>

@@ -1,0 +1,41 @@
+/* @file
+ * This file is a custom file that loads all files. Each non-base layer
+ * can be disabled.
+ *
+ * Do not name this file "STARTER.scss". This file should be named
+ * riancallahan_com_neato.scss. If you used the drush command to generate this subtheme,
+ * it should be named for you.
+ *
+ * This application file (ntest.scss) is where all the partials are
+ * imported.
+ */
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Import normalize.css
+@import "../../neato/bower_components/normalize.css/normalize.css";
+
+// Import Bourbon.
+@import "../../neato/bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+// Import Neat grid settings overrides (must be imported before Neat).
+@import "layout/grid-settings";
+
+// Import Neat.
+@import "../../neato/bower_components/neat/app/assets/stylesheets/neat";
+@import "../../neato/bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+// Import base styles and layout.
+@import "base/base";
+@import "layout/layout";
+
+// Import components.
+@import "components/messages";
+@import "components/tables";
+@import "components/tasks";
+@import "components/flexbox";
+@import "components/footer";
+
+// Import theme styles last.
+@import "theme/theme";

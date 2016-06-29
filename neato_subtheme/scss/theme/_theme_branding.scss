@@ -1,0 +1,54 @@
+.site-logo {
+  img {
+    width: $logo-width;
+    height: $logo-height;
+  }
+
+  @include media($mobile) {
+    @include fill-parent();
+    display: block;
+    height: $logo-container-height;
+    padding-top: $logo-container-padding;
+    padding-bottom: $logo-container-padding;
+    text-align: center;
+    background-color: $background-mobile-logo;
+  }
+}
+
+/* underline mechanism - put into style mixin */
+
+.site-name,
+.site-slogan {
+  @include media($mobile) {
+    width: $branding-container-width;
+    margin: 0 auto;
+  }
+
+  .inner-wrapper {
+    border-bottom: 1px solid $white;
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.site-name {
+  @include media($mobile) {
+    padding-top: 10px;
+  }
+  @include media($medium-screen-up) {
+    padding-top: $title-spacing-top;
+  }
+}
+
+.site-slogan {
+  @include media($mobile) {
+    padding-bottom: 10px;
+  }
+}
+
+.branding-text {
+  @include media($mobile) {
+    background-color: $background-mobile-main;
+    padding-top: 20px;
+  }
+}

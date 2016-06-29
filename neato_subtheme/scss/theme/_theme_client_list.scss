@@ -1,0 +1,10 @@
+.block-client-list {
+  @include media($mobile) {
+    width: $branding-container-width;
+    margin: 0 auto;
+    padding-bottom: 28px;
+  }
+  @include media($medium-screen-up) {
+    margin-top: $client-list-spacing-top;
+  }
+}

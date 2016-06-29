@@ -1,0 +1,20 @@
+global-styling:
+  version: 1.x
+  css:
+    base:
+      css/riancallahan_com_neato.css: {}
+global-scripts:
+  version: 1.x
+  js:
+    js/scripts.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    #- riancallahan_com_neato/flowtype
+flowtype:
+  version: 1.1
+  js:
+    js/flowtype/flowtype.js: {}
+  dependencies:
+    - core/jquery

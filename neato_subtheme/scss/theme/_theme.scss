@@ -1,0 +1,58 @@
+// Import theme styles.
+@import "theme_typography";
+@import "theme_links";
+@import "theme_menus";
+@import "theme_branding";
+@import "theme_client_list";
+
+// These are more like state; or layout? - put into separate dir?
+
+// General theme styles.
+body {
+  @include media($mobile) {
+    background-color: $background-mobile-footer;
+  }
+  @include media($medium-screen-up) {
+    background-color: $background-medium-screen-up;
+  }
+}
+
+.layout-main {
+  @include media($mobile) {
+    background-color: $background-mobile-main;
+  }
+}
+
+.layout-sidebar-first,
+.layout-content  {
+  @include media($medium-screen-up) {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+}
+
+.layout-content {
+  @include media($mobile) {
+    background-color: $background-mobile-main;
+  }
+}
+
+.layout-footer {
+  @include media($mobile) {
+    background-color: $background-mobile-footer;
+  }
+}
+
+.layout-footer-bottom {
+  @include media($medium-screen-up) {
+    border-top: 1px solid $white;
+  }
+}
+
+.block-drupal-profile,
+.block-menu-primary {
+  @include media($mobile) {
+    width: $branding-container-width;
+    margin: 0 auto;
+  }
+}
