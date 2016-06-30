@@ -5,8 +5,9 @@ base theme: neato
 core: 8.x
 libraries:
   - riancallahan_com_neato/global-styling
+  # this subtheme only requires jQuery if we decide to use
+  # the FlowType js library.
   #- riancallahan_com_neato/global-scripts
-  #- riancallahan_com_neato/flowtype
 regions:
   header: Header
   featured: Featured

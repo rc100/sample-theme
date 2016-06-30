@@ -1,4 +1,3 @@
-
 //# sourceMappingURL=maps/scripts.js.map
 
 (function ($) {
@@ -6,11 +5,12 @@
 
   Drupal.behaviors.rcneato = {
     attach: function(context, settings) {
-      //$(context).find('.inner-wrapper').once('fit-text').each(function () {
-        //$(this).flowtype();
-        //$(this).fitText();
-        //$(this).css('color', 'blue');
-      //});
+      /*
+      // Apply FlowType to site title and branding text.
+      $(context).find('.inner-wrapper').once('flow-type').each(function () {
+        $(this).flowtype();
+      });
+      */
     }
   };
 

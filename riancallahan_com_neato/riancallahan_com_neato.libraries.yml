@@ -11,6 +11,7 @@ global-scripts:
     - core/drupal
     - core/jquery
     - core/jquery.once
+    # not using FlowType js library yet.
     #- riancallahan_com_neato/flowtype
 flowtype:
   version: 1.1
