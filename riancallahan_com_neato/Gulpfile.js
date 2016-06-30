@@ -105,6 +105,7 @@ gulp.task('drush:cr', function () {
 
 /**
  * Define a task to spawn Browser Sync.
+ *
  * Options are defaulted, but can be overridden within your config.js file.
  */
 gulp.task('browser-sync', function() {
@@ -121,13 +122,13 @@ gulp.task('browser-sync', function() {
  * Defines the watcher task.
  */
 gulp.task('watch', function() {
-  // watch scss for changes and clear drupal theme cache on change
+  // Watch scss for changes and clear drupal theme cache on change.
   gulp.watch(['scss/**/*.scss'], ['sass', 'drush:cc']);
 
-  // watch js for changes and clear drupal theme cache on change
+  // Watch js for changes and clear drupal theme cache on change.
   gulp.watch(['js-src/**/*.js'], ['compress', 'drush:cc']);
 
-  // If user has specified an override, rebuild Drupal cache
+  // If user has specified an override, rebuild Drupal cache.
   if (!config.twig.useCache) {
     gulp.watch(['templates/**/*.html.twig'], ['drush:cr']);
   }
